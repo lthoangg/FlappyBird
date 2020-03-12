@@ -3,10 +3,9 @@ import os
 import bird, background
 import Pipe
 import Base
+
 pygame.font.init()
 STAT_FONT = pygame.font.SysFont("comicsans", 50)
-
-
 
 def draw(win, bird, bg, pipe, base, score):
     bg.draw(win)
@@ -18,11 +17,8 @@ def draw(win, bird, bg, pipe, base, score):
     text = STAT_FONT.render("Score: " + str(score), 1, (255, 255, 255))
     win.blit(text, (500 - 10 - text.get_width(), 10))
 
-
-
     pygame.display.update()
     
-
 def move(win, bird, pipe, base):
     bird.move()
     bird.keyListener()
