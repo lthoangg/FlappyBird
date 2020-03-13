@@ -5,7 +5,7 @@ import os
 pipe_img = pygame.transform.scale2x(pygame.image.load(os.path.join("imgs","pipe.png")))
 
 class Pipe:
-    GAP = 200
+    GAP = 210
     vel = 5
     def __init__(self,x=600):
         self.x = x
