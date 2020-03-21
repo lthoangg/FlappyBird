@@ -49,7 +49,7 @@ def main():
         clock.tick(30)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                print('ESC')
+                print("Your score: " + str(score))
                 run = False
                 pygame.quit()
                 quit()
@@ -59,6 +59,7 @@ def main():
         rem = []
         for p in pipes:
             if p.collide(b):
+                print("Your score: " + str(score))
                 run = False
 
             if not p.passed and p.x < b.x:
